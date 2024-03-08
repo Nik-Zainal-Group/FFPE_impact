@@ -41,10 +41,6 @@ The script returns a list containing the following components:
 
 These outputs facilitate further analysis of the FFPE artefact impact and the evaluation of mutation signatures in your genomic data.
 
-## License
-
-Copyright 2024 Shadi Basyuni
-
 ## Authors
 
 Shadi Basyuni
