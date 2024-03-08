@@ -18,6 +18,17 @@ Before running the script, you must define the following parameters:
 
 Make sure that the `SNV_path` and `ID_path` point to valid files containing your mutation data in a format readable by `read.table()`. The organ type should match one of the supported types in `signature.tools.lib` to ensure accurate signature fitting - it is now possible to specify ```organ="Other"``` in FitMS.
 
+## Usage
+
+Load the script into your R environment and call the `FFPE_impact` function with the necessary parameters:
+
+```R
+source("FFPE_impact.R")
+result <- FFPE_impact(SNV_path = "your/SNV/file/path.tsv",
+                      ID_path = "your/ID/file/path.tsv",
+                      organ = "yourOrganType")
+```
+
 ## Output
 
 The script returns a list containing the following components:
@@ -29,3 +40,15 @@ The script returns a list containing the following components:
 - `newMHcount`: Proportions of microhomology-associated deletions post artefact adjustment.
 
 These outputs facilitate further analysis of the FFPE artefact impact and the evaluation of mutation signatures in your genomic data.
+
+## License
+
+Copyright 2024 Shadi Basyuni
+
+## Authors
+
+Shadi Basyuni
+
+## Acknowledgments
+
+This script is dependent on the `signature.tools.lib` library for performing mutation signature analysis. We acknowledge the authors and contributors of `signature.tools.lib` for their valuable work.
